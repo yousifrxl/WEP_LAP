@@ -6,7 +6,7 @@ describe("Calculator", () => {
  });
  // calculator.test.js
 test("adds 1 + 2 to equal 3", () => {
- expect(add(1, 2)).toBe(5); // Intentionally changed to 5 to make it fail
+ expect(add(1, 2)).toBe(3); // Corrected back to 3
 });
 
  test("multiplies 2 * 4 to equal 8", () => {
