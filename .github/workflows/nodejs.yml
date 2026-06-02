@@ -56,4 +56,4 @@ jobs:
             echo "Simulated health check failure!"
             echo "HTTP 500 - Service Unhealthy"
             exit 1
-          fi 
+          fi
