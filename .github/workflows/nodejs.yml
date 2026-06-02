@@ -45,4 +45,15 @@ jobs:
         run: |
           echo "Deploying application to Production environment..."
           echo "Application version: $(git rev-parse --short HEAD)"
-          echo "Deployment to Production successful!" 
+      - name: Simulated health check
+        run: |
+          echo "Running health checks..."
+          echo "Health endpoint: https://yourapp.com/health (simulated)"
+          if (( RANDOM % 2 == 0 )); then
+            echo "Health check passed!"
+            echo "Deployment to Production successful!"
+          else
+            echo "Simulated health check failure!"
+            echo "HTTP 500 - Service Unhealthy"
+            exit 1
+          fi 
